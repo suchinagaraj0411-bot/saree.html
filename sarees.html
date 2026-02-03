@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattu Heritage | Indian Saree Collection</title>
+    <style>
+        /* Colorful & Royal Theme */
+        :root {
+            --royal-purple: #4B0082;
+            --gold: #D4AF37;
+            --deep-pink: #C71585;
+            --silk-white: #FFF9F0;
+            --border-color: #8B4513;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: var(--silk-white);
+            color: #333;
+        }
+
+        /* 1. Welcome Highlight Section */
+        .welcome-hero {
+            background: linear-gradient(rgba(75, 0, 130, 0.7), rgba(199, 21, 133, 0.7)), 
+                        url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=1500');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border-bottom: 10px double var(--gold);
+        }
+
+        .welcome-hero h1 { font-size: 4rem; text-shadow: 3px 3px 5px black; margin: 0; }
+        .welcome-hero p { font-size: 1.5rem; font-style: italic; }
+
+        /* Navigation */
+        nav {
+            background: var(--royal-purple);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        nav a { color: var(--gold); text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+
+        /* 2. Introduction Section */
+        .intro-section {
+            padding: 50px 10%;
+            text-align: center;
+            background: white;
+            border: 2px solid var(--gold);
+            margin: 20px;
+            border-radius: 15px;
+        }
+
+        /* 3. The Saree Gallery Grid */
+        .gallery-title { text-align: center; color: var(--deep-pink); font-size: 2.5rem; margin-top: 40px; }
+        
+        .saree-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .saree-card {
+            background: white;
+            padding: 10px;
+            text-align: center;
+            transition: 0.4s;
+            border-radius: 10px;
+        }
+
+        .saree-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Different Borders for Each Saree */
+        .b-1 { border: 8px ridge var(--gold); }       /* Kanchi */
+        .b-2 { border: 8px double var(--border-color); } /* Dharmavaram */
+        .b-3 { border: 8px dotted var(--deep-pink); }   /* Gadwal */
+        .b-4 { border: 8px dashed var(--royal-purple); } /* Uppada */
+        .b-5 { border: 8px inset #ff69b4; }             /* Semi Pattu */
+        .b-6 { border: 8px groove #228B22; }            /* Cotton */
+        .b-7 { border: 10px solid #FFD700; }            /* Banarasi */
+        .b-8 { border: 5px outset #800000; }            /* Silk */
+        .b-9 { border: 8px ridge #4169E1; }             /* Rayon */
+        .b-10 { border: 6px double #FF4500; }           /* Cotton Silk */
+        .b-11 { border: 8px dotted #9400D3; }           /* Silk Blend */
+
+        .saree-card:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        /* 4. Contact Section */
+        .contact-section {
+            background: var(--royal-purple);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact-form input, textarea {
+            width: 300px; padding: 10px; margin: 10px; border-radius: 5px; border: none;
+        }
+
+        /* 5. Thank You Section */
+        .thank-you {
+            background: linear-gradient(var(--deep-pink), var(--royal-purple));
+            color: var(--gold);
+            padding: 60px;
+            text-align: center;
+            font-size: 2rem;
+            border-top: 5px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="welcome-hero" id="home">
+        <h1>Pattu Heritage</h1>
+        <p>Celebrating the "Six Yards of Grace" with Traditional Weaves</p>
+    </section>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Introduction</a>
+        <a href="#collection">Collection</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section class="intro-section" id="about">
+        <h2>Why We Wear Sarees</h2>
+        <p>A Saree is not just clothing; it is a symbol of Indian pride and cultural identity. We wear sarees because they represent thousands of years of tradition, craftsmanship, and elegance. From weddings to festivals, a saree makes every woman feel royal and connected to her roots.</p>
+    </section>
+
+    <h2 class="gallery-title" id="collection">Our 11 Signature Collections</h2>
+
+    <div class="saree-grid">
+        
+        <div class="saree-card b-1">
+            <img src="/media/kanchi pattu.jpeg" alt="Kanchi">
+            <h3>1. Kanchi Pattu</h3>
+        </div>
+
+        <div class="saree-card b-2">
+            <img src="/media/dharmavaram-silk-fancy-saree-7164.webp" alt="Dharmavaram">
+            <h3>2. Dharmavaram Pattu</h3>
+        </div>
+
+        <div class="saree-card b-3">
+            <img src="/media/gadwal pattu.jpeg" alt="Gadwal">
+            <h3>3. Gadwal Pattu</h3>
+        </div>
+
+        <div class="saree-card b-4">
+            <img src="/media/uppada pattu.jpeg" alt="Uppada">
+            <h3>4. Uppada Pattu</h3>
+        </div>
+
+        <div class="saree-card b-5">
+            <img src="/media/semi pattu saree.webp" alt="Semi">
+            <h3>5. Semi Pattu</h3>
+        </div>
+
+        <div class="saree-card b-6">
+            <img src="/media/saree cotton blend.webp" alt="Cotton">
+            <h3>6. Cotton Saree</h3>
+        </div>
+
+        <div class="saree-card b-7">
+            <img src="/media/banarasi saree.webp" alt="Banarasi">
+            <h3>7. Banarasi Saree</h3>
+        </div>
+
+        <div class="saree-card b-8">
+            <img src="/media/silk saree.jpeg" alt="Silk">
+            <h3>8. Silk Saree</h3>
+        </div>
+
+        <div class="saree-card b-9">
+            <img src="/media/rayon saree.jpeg" alt="Rayon">
+            <h3>9. Rayon Silk Saree</h3>
+        </div>
+
+        <div class="saree-card b-10">
+            <img src="/media/cotton saree.jpeg" alt="Cotton Silk">
+            <h3>10. Cotton Silk Saree</h3>
+        </div>
+
+        <div class="saree-card b-11">
+            <img src="/media/saree cotton blend.webp" alt="Silk Blend">
+            <h3>11. Silk Blend Saree</h3>
+        </div>
+
+         <div class="saree-card b-12">
+            <img src="/media/net sarees.jpeg" alt="Net Saree">
+            <h3>12. Net Saree</h3>
+        </div>
+
+         <div class="saree-card b-13">
+            <img src="/media/tissue sarees.webp" alt="Tissue Saree">
+            <h3>13. Tissue Saree</h3>
+        </div>
+
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h2>Inquire Now</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Name"><br>
+            <input type="email" placeholder="Email"><br>
+            <textarea placeholder="Tell us which saree you love..."></textarea><br>
+            <button style="background: var(--gold); padding: 10px 30px; border: none; font-weight: bold; cursor: pointer;">Submit</button>
+        </div>
+    </section>
+
+    <footer class="thank-you">
+        <p>Dhanyavadalu! (Thank You)</p>
+        <p style="font-size: 1.2rem; color: white;">Thank you for exploring our beautiful collection. We hope you feel the magic of Indian Silk!</p>
+    </footer>
+
+</body>
+</html>
